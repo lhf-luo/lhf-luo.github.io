@@ -2,7 +2,7 @@
 
 基于 Hexo 8 + Butterfly 5，使用 pnpm 管理依赖，通过 GitHub Actions 发布到 GitHub Pages。
 
-访问地址：https://lhf-luo.github.io/
+访问地址：<https://lhf-luo.github.io/>
 
 ## 本地使用
 
@@ -13,7 +13,7 @@ pnpm install --frozen-lockfile
 pnpm server
 ```
 
-打开 http://localhost:4000，按 Ctrl+C 停止预览。
+打开 <http://localhost:4000，按> Ctrl+C 停止预览。
 
 ```bash
 pnpm clean
@@ -25,15 +25,15 @@ pnpm check
 
 ## 修改内容
 
-| 内容 | 文件 |
-| --- | --- |
-| 标题、作者、网址 | `_config.yml` |
+| 内容                              | 文件                    |
+| --------------------------------- | ----------------------- |
+| 标题、作者、网址                  | `_config.yml`           |
 | 导航、头像路径、公告、GitHub 按钮 | `_config.butterfly.yml` |
-| 间距、配色、文章卡片 | `source/css/custom.css` |
-| 初始占位头像 | `source/img/avatar.svg` |
-| 个人介绍 | `source/about/index.md` |
-| 文章 | `source/_posts/*.md` |
-| 新文章默认格式 | `scaffolds/post.md` |
+| 间距、配色、文章卡片              | `source/css/custom.css` |
+| 初始占位头像                      | `source/img/avatar.svg` |
+| 个人介绍                          | `source/about/index.md` |
+| 文章                              | `source/_posts/*.md`    |
+| 新文章默认格式                    | `scaffolds/post.md`     |
 
 替换头像：将照片放入 `source/img/avatar.png`，然后把主题配置中的 `avatar.img` 改成 `/img/avatar.png`。也可以一并修改 `favicon`。
 
@@ -76,7 +76,7 @@ git -c http.proxy=http://127.0.0.1:7890 push -u origin main
 2. 将 **Build and deployment → Source** 设为 **GitHub Actions**。
 3. 打开 **Actions → Deploy Hexo to GitHub Pages**。
 4. 如果首次构建因尚未开启 Pages 失败，完成设置后点击 **Re-run all jobs**；也可以在工作流页面选择 **Run workflow → main**。
-5. 工作流成功后，访问 https://lhf-luo.github.io/ 。
+5. 工作流成功后，访问 <https://lhf-luo.github.io/> 。
 
 此工作流构建并上传 `public/` 产物，不需要 `gh-pages` 分支，也不需要配置个人访问令牌。
 
@@ -93,6 +93,25 @@ git -c http.proxy=http://127.0.0.1:7890 push
 ```
 
 也可以直接在 GitHub 网页编辑 `source/_posts/` 内的文章，提交后会自动发布。
+
+npm clean && pnpm build # 重新生成，否则本地 public 里可能残留旧页面
+pnpm check
+git add -A
+git commit -m "Remove post"
+git -c http.proxy=<http://127.0.0.1:7890> push
+
+─────────────────────────────────────────────┬────────────────────────────────────────────────┐
+│ 你想改的 │ 要改哪里 │
+├──────────────────────────────────────────────┼────────────────────────────────────────────────┤
+│ 写文章、改正文、标题、日期、分类、标签、摘要 │ 只改 source/\_posts/\*.md ✅ │
+├──────────────────────────────────────────────┼────────────────────────────────────────────────┤
+│ 头像、导航菜单、公告、GitHub 按钮、侧栏卡片 │ \_config.butterfly.yml │
+├──────────────────────────────────────────────┼────────────────────────────────────────────────┤
+│ 网站标题、作者、网址、首页每页文章数 │ \_config.yml │
+├──────────────────────────────────────────────┼────────────────────────────────────────────────┤
+│ 换颜色、间距、字号 │ source/css/custom.css │
+├──────────────────────────────────────────────┼────────────────────────────────────────────────┤
+│ 文章里插图片 │ 图片放 source/img/，文章里写 ![](/img/xxx.png)
 
 ## 说明
 
