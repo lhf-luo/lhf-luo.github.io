@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-label="lhf-luo 的占位头像">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e4f3ff"/>
+      <stop offset="1" stop-color="#c7e3f4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="120" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="92" fill="none" stroke="#347fa7" stroke-width="5"/>
+  <text x="120" y="141" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="62" font-weight="600" fill="#286487">LHF</text>
+</svg>

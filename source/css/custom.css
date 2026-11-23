@@ -1,0 +1,96 @@
+/* 参考布局：简洁蓝色导航、纯文字文章卡片和右侧信息栏。 */
+:root {
+  --lhf-blue: #347fa7;
+  --lhf-ink: #26364a;
+}
+
+#page-header.not-top-img,
+#page-header.not-top-img #nav {
+  background: var(--lhf-blue);
+}
+
+#page-header.not-top-img #nav #blog-info .nav-site-title,
+#page-header.not-top-img #nav #blog-info .site-name {
+  color: #fff;
+}
+
+#page-header.not-top-img #nav,
+#page-header.not-top-img #nav a,
+#page-header.not-top-img #nav .site-page {
+  color: #fff;
+}
+
+#page-header.not-top-img #nav .menus_item_child a {
+  color: var(--lhf-ink);
+}
+
+.layout {
+  max-width: 1500px;
+  padding-top: 40px;
+}
+
+#recent-posts > .recent-post-item,
+#aside-content .card-widget {
+  border-radius: 12px;
+  box-shadow: 0 3px 18px rgba(35, 45, 55, 0.09);
+}
+
+#recent-posts > .recent-post-item {
+  min-height: 260px;
+  margin-bottom: 24px;
+}
+
+#recent-posts > .recent-post-item > .recent-post-info {
+  padding: 40px 46px;
+}
+
+#recent-posts .article-title {
+  color: var(--lhf-ink);
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+#recent-posts .article-meta-wrap {
+  margin: 8px 0 14px;
+  color: #888;
+}
+
+#recent-posts .content {
+  color: #555;
+  line-height: 1.95;
+}
+
+#aside-content .card-widget {
+  margin-top: 24px;
+}
+
+#aside-content .card-widget:first-child {
+  margin-top: 0;
+}
+
+#aside-content .avatar-img {
+  width: 120px;
+  height: 120px;
+}
+
+#aside-content #card-info-btn {
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding-top: 20px;
+  }
+
+  #recent-posts > .recent-post-item {
+    min-height: auto;
+  }
+
+  #recent-posts > .recent-post-item > .recent-post-info {
+    padding: 26px 24px;
+  }
+
+  #recent-posts .article-title {
+    font-size: 21px;
+  }
+}

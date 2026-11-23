@@ -1,0 +1,83 @@
+# 只写需要覆盖的配置；其余使用 Butterfly 自带默认值。
+nav:
+  display_title: true
+  fixed: false
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-user
+
+social:
+  fab fa-github: https://github.com/lhf-luo || GitHub || '#24292e'
+
+avatar:
+  img: /img/avatar.svg
+  effect: false
+favicon: /img/avatar.svg
+
+# 简洁顶部导航，不使用全屏首图。
+disable_top_img: true
+background: '#ffffff'
+
+cover:
+  index_enable: false
+  aside_enable: false
+  archives_enable: false
+
+index_layout: 1
+index_post_content:
+  method: 2
+  length: 160
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description: 学习、研究与技术记录
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/lhf-luo
+  card_announcement:
+    enable: true
+    content: 欢迎来到我的个人主页！这里记录论文阅读、学习笔记与项目实践。
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+  card_archives:
+    format: YYYY年MM月
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+  copyright:
+    enable: true
+    version: true
+
+# 初始保持浅色，与参考截图一致。
+darkmode:
+  enable: false
+
+# 未接入访问统计，不显示无效的计数。
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+
+font:
+  global_font_size: 16px
+  font_family: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif'
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
